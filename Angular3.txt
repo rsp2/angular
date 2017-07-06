@@ -1,0 +1,116 @@
+install node.js
+https://nodejs.org/en/
+
+Verificar vers�o node.js
+> node -v
+
+Verificar vers�o npm
+> npm -v
+
+Instalar typescript (???)
+> npm install -g typescript
+
+Instalar angular cli
+> npm install -g @angular/cli
+
+Update npm
+> npm i -g npm
+
+Verificar vers�o angular cli
+> ng -v
+
+Cria novo projeto (na pasta de projetos)
+> cd projetos
+> ng new nomeprojeto
+
+Cria Component
+> ng g component nomecomponent
+
+Cria Directive
+> ng g directive nomedirective
+
+Cria Pipe
+> ng g pipe nomepipe
+
+Cria Service
+> ng g service nomeservice
+
+Cria Class
+> ng g class nomeclass
+
+Cria Interface
+> ng g interface nomeinterface
+
+Cria Enum
+> ng g enum nomeenum
+
+Cria Module
+> ng g module nomemodule
+
+============================
+Instalar Bootstrap 4
+============================
+> npm install --save bootstrap@next
+
+colocar no angular-cli.json
+"styles": [
+	"styles.css",
+	"../node_modules/bootstrap/dist/css/bootstrap.css"
+],
+
+"scripts": [
+        	"../node_modules/jquery/dist/jquery.js",
+
+        	"../node_modules/tether/dist/js/tether.js",
+
+	"../node_modules/bootstrap/dist/js/bootstrap.js"
+],
+
+============================
+  Instalar Materialize
+============================
+> npm install materialize-css --save
+> npm install angular2-materialize --save
+
+> npm install jquery@^2.2.4 --save
+> npm install hammerjs --save
+
+colocar no angular-cli.json
+"styles": [
+	 "../node_modules/materialize-css/dist/css/materialize.css"
+],
+
+"scripts": [
+	  "../node_modules/jquery/dist/jquery.js",
+	  "../node_modules/hammerjs/hammer.js",
+ 	 "../node_modules/materialize-css/dist/js/materialize.js"
+],
+
+Add to the top of app.module.ts
+import { MaterializeModule } from 'angular2-materialize';
+
+Add MaterializeModule inside imports array of @NgModule decorator in app.module.ts
+
+Add this line to header of index.html
+<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+*******
+<select materialize="material_select">
+
+For dynamic select elements apply the materializeSelectOptions directive to trigger element updates when the options list changes:
+
+<select materialize="material_select" [materializeSelectOptions]="selectOptions">
+  <option *ngFor="let option of selectOptions" [value]="option.value">{{option.name}}</option>
+</select>
+******
+
+============================
+  Instalar Lodash
+============================
+> npm install lodash --save
+> npm install @types/lodash --save
+
+Add to the top of app.component.ts
+import * as _ from 'lodash';
+
+vvvv
